@@ -2,23 +2,85 @@
 // stampare sulla pagina gli elementi della lista individualmente con un ciclo for che poi commentate, 
 // e poi fate lo stesso con il while (che lasciate attivo).
 
-// dichiarazione arr
-let arr = ["latte", "miele", "sale", "pepe", "sale", "sale"];
 
-// ciclo for console esplicativo 
-// for(let i = 0; i < arr.length; i++){
-//     console.log("arr[" + i + "]: " + arr[i]);
 
+
+
+
+
+
+
+
+// dichiarazioni
+let lista = ["latte", "miele", "sale", "sale", "sale", "sale", "sale", "pepe", "sale", "sale"];
+
+
+let arrInnerHtml= [];
+// ciclo for per costruire arrInnerHtml
+// for(let i = 0; i < lista.length; i++){
+//     console.log("lista[" + i + "]: " + lista[i]);
+//     arrInnerHtml += [`<div class="tessera">${lista[i]}</div>`];
+    
+    
 // };
 
-// ciclo while
+// ciclo while per costruire arrInnerHtml
 let i = 0;
-while(i < arr.length){
-    console.log("arr[" + i + "]: " + arr[i]);
+while(i < lista.length){
+    console.log("lista[" + i + "]: " + lista[i]);
+    arrInnerHtml += [`<div class="tessera">${lista[i]}</div>`];
 
-    
+
     i++;
 };
+
+const contenitore = document.querySelector(".container");
+contenitore.innerHTML= arrInnerHtml;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -38,6 +100,8 @@ while(i < arr.length){
 
 //     i++;
 // };
+
+// backtick  ``
 
 // for(){};
 
