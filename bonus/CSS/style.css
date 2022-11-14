@@ -1,16 +1,4 @@
-/* roboto */
-/* 
 
-
-font-family: 'Roboto', sans-serif;
-
-*/
-
-/* :root{ */
-    /* var(--w-colonna) */
-    /* --w-colonna: 130px; */
-    
-/* } */
 
 *{
     margin:0;
@@ -20,31 +8,36 @@ font-family: 'Roboto', sans-serif;
 }
 
 body{
-    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
     padding: 30px;
 }
 .container{
-    /* width: calc(100vw - 100px); */
-    /* height: calc(100vh - 100px); */
-
     display: flex;
-    flex-wrap: wrap;
-    /* margin: 20px; */
-
-    background-color: blue;
+    flex-direction: column;
+    /* background-color: blue; */
 }
 
 .tessera{
     width: 100px;
-    height: 100px;
     margin: 2px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 
-    background-color: rgb(255, 0, 0);
+    /* background-color: rgb(255, 0, 0); */
+}
+
+.cont-input{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    width: 20%;
+}
+button{
+    width: 60px;
+    margin-left: 10px;
 }

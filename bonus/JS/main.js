@@ -12,7 +12,7 @@
 
 
 // dichiarazioni
-let lista = ["latte", "miele", "sale", "sale", "sale", "sale", "sale", "pepe", "sale", "sale"];
+let lista = ["latte", "miele", "sale",  "pepe",];
 
 
 let arrInnerHtml= [];
@@ -38,10 +38,28 @@ const contenitore = document.querySelector(".container");
 contenitore.innerHTML= arrInnerHtml;
 
 
+const button = document.querySelector("button");
+const newElement = document.getElementById("newElement");
 
 
+button.addEventListener("click",
+    function(){
+        // if che serve per far sì che non vada a capo quando clicco il tasto con niente scritto
+        if(newElement.value != ""){
+
+            // incremento l'array con il div con scritto il nuovo elemento
+            arrInnerHtml += [`<div class="tessera">${newElement.value}</div>`];
+            // ricopio l'array aggiornato nell'inner del container
+            contenitore.innerHTML= arrInnerHtml;
 
 
+            // cancello ciò che c'è scritto nell'input
+            newElement.value = "";
+
+        };
+        
+    }
+);
 
 
 
