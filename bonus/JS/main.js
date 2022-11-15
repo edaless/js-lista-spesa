@@ -3,39 +3,24 @@
 // e poi fate lo stesso con il while (che lasciate attivo).
 
 
-
-
-
-
-
-
-
-
 // dichiarazioni
-let lista = ["latte", "miele", "sale",  "pepe",];
+let lista = ["latte", "miele", "sale",  "pepe"];
+const contenitore = document.querySelector(".container");
 
 
-let arrInnerHtml= [];
-// ciclo for per costruire arrInnerHtml
+// ciclo for
 // for(let i = 0; i < lista.length; i++){
-//     console.log("lista[" + i + "]: " + lista[i]);
-//     arrInnerHtml += [`<div class="tessera">${lista[i]}</div>`];
-    
-    
+//     contenitore.innerHTML += `<div class="tessera">${lista[i]}</div>`;  
 // };
 
-// ciclo while per costruire arrInnerHtml
+// ciclo while
 let i = 0;
 while(i < lista.length){
-    console.log("lista[" + i + "]: " + lista[i]);
-    arrInnerHtml += [`<div class="tessera">${lista[i]}</div>`];
-
+    contenitore.innerHTML += `<div class="tessera">${lista[i]}</div>`;
 
     i++;
 };
 
-const contenitore = document.querySelector(".container");
-contenitore.innerHTML= arrInnerHtml;
 
 
 const button = document.querySelector("button");
@@ -44,18 +29,12 @@ const newElement = document.getElementById("newElement");
 
 button.addEventListener("click",
     function(){
+
         // if che serve per far sì che non vada a capo quando clicco il tasto con niente scritto
-        if(newElement.value != ""){
-
-            // incremento l'array con il div con scritto il nuovo elemento
-            arrInnerHtml += [`<div class="tessera">${newElement.value}</div>`];
-            // ricopio l'array aggiornato nell'inner del container
-            contenitore.innerHTML= arrInnerHtml;
-
-
-            // cancello ciò che c'è scritto nell'input
+        if(newElement.value != ""){            
+            contenitore.innerHTML += `<div class="tessera">${newElement.value}</div>`;
+            
             newElement.value = "";
-
         };
         
     }
